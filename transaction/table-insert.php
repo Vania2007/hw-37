@@ -3,8 +3,6 @@ require "db-connection.php";
 try {
 	$conn->autocommit ( FALSE );
 
-	$conn->query ( "CREATE TABLE `turnover4`.`turnover` (`product_name` VARCHAR(255) NOT NULL , `product_price` DECIMAL(10,2) NOT NULL , `product_sale` INT NOT NULL ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;" );
-
 	$conn->query ( "INSERT INTO `turnover4`.`turnover` (`product_name`, `product_price`, `product_sale`) VALUES ('Хліб', 20.50, '250');" );
 	$conn->query ( "INSERT INTO `turnover4`.`turnover` (`product_name`, `product_price`, `product_sale`) VALUES ('Молоко', 60.48, '176');" );
 	$conn->query ( "INSERT INTO `turnover4`.`turnover` (`product_name`, `product_price`, `product_sale`) VALUES ('Шоколад', 62.15, '73');" );
